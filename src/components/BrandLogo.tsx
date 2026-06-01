@@ -1,6 +1,6 @@
 import darkLogo from "../Images/logo_white.PNG";
 import lightLogo from "../Images/logo_dark.PNG";
-import mobileLogo from "../Images/logo_white_mobile.PNG";
+import mobileLogo from "../Images/logo_white.PNG";
 
 type BrandLogoProps = {
   variant?: "dark" | "light";

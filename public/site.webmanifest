@@ -1,0 +1,17 @@
+{
+  "name": "Supplynex",
+  "short_name": "Supplynex",
+  "description": "A future distribution network for FMCG manufacturers and distributors across India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff5a0a",
+  "icons": [
+    {
+      "src": "/supplynex-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
