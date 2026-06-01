@@ -1,9 +1,14 @@
-import { Facebook, Globe2, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
+import { Facebook, Globe2, Instagram, Linkedin, Mail, Phone, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BrandLogo } from "./BrandLogo";
 import { footerCompanyLinks, footerQuickLinks } from "../data/navigation";
 
 export function Footer() {
+  const phoneNumber = (import.meta.env.VITE_WHATSAPP_NUMBER as string | undefined) ?? "91XXXXXXXXXX";
+  const formattedPhone = phoneNumber.startsWith("91")
+    ? `+91 ${phoneNumber.slice(2)}`
+    : `+${phoneNumber}`;
+
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -17,7 +22,7 @@ export function Footer() {
             <a href="https://www.facebook.com" aria-label="Facebook">
               <Facebook size={24} strokeWidth={2.6} />
             </a>
-            <a href="https://www.instagram.com" aria-label="Instagram">
+            <a href="https://www.instagram.com/supplynex.in" aria-label="Instagram">
               <Instagram size={24} strokeWidth={2.6} />
             </a>
             <a href="https://www.youtube.com" aria-label="YouTube">
@@ -46,13 +51,17 @@ export function Footer() {
 
         <div className="footer-column contact-column">
           <h2>Contact</h2>
-          <a href="mailto:contact@supplynex.com">
+          <a href="mailto:contact@supplynex.in">
             <Mail size={23} />
-            contact@supplynex.com
+            contact@supplynex.in
           </a>
-          <a href="https://www.supplynex.com">
+          <a href={`tel:+${phoneNumber}`}>
+            <Phone size={23} />
+            {formattedPhone}
+          </a>
+          <a href="https://www.supplynex.in">
             <Globe2 size={24} />
-            www.supplynex.com
+            www.supplynex.in
           </a>
         </div>
       </div>

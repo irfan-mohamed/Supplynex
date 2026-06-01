@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { MainLayout } from "../layouts/MainLayout";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
+import { ContactPage } from "../pages/ContactPage";
 import { HomePage } from "../pages/HomePage";
 
 const futurePages = [
@@ -14,7 +15,6 @@ const futurePages = [
   { path: "/about", title: "About Us" },
   { path: "/mission", title: "Our Mission" },
   { path: "/careers", title: "Careers" },
-  { path: "/contact", title: "Contact Us" },
 ];
 
 export default function App() {
@@ -22,6 +22,7 @@ export default function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
         {futurePages.map((page) => (
           <Route
             key={page.path}
