@@ -1010,14 +1010,13 @@ main {
 
 @media (max-width: 560px) {
   .logo-link {
-    flex-basis: 54px;
-    width: 54px;
-    height: 50px;
-    border-radius: 12px;
+    flex-basis: 182px;
+    width: 182px;
+    height: 56px;
   }
 
   .header-logo {
-    width: 50px;
+    width: 182px;
   }
 
   .desktop-only-copy {
